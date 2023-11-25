@@ -1,6 +1,6 @@
 package Classes;
 
-import Classes.CrowdManagment;
+import java.util.ArrayList;
 
 public class Officer extends Person implements CrowdManagment {
 
@@ -8,7 +8,7 @@ public class Officer extends Person implements CrowdManagment {
 
 
     public  Officer(String name , int age, String stuff){super(name,age,stuff);}
-
+    public Officer(){}
     public  Officer(boolean perform,String name , int age, String stuff){
         super(name,age,stuff);
         this.Perform = perform;
@@ -29,9 +29,19 @@ public class Officer extends Person implements CrowdManagment {
         this.Perform = state;
     }
 
-    public boolean givePermission(Person obj){
+    public static boolean givePermission(String obj){
         // here some algorthim for permissions
+        ArrayList<String> notAllowedStuff = new ArrayList<String>();
 
-        return true;
+        notAllowedStuff.add("Back bag");
+        notAllowedStuff.add("Forbidden item");
+        notAllowedStuff.add("Another prohibited item");
+        String person_item = obj;
+        boolean found = notAllowedStuff.contains(person_item);
+        if (found) {return false;}
+        else {return true;}
+
+
     }
+
 }

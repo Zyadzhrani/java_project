@@ -1,19 +1,21 @@
 package Classes;
 
-public class Elderly extends Person {
+public class Elderly extends Person  {
     private boolean Permission;
-    private Helper isHelperNeeded;
 
 
-    public Elderly(String Name,int age, String Stuff){ super(Name,age,Stuff);}
+    public Elderly(String Name,int age, String Stuff){ super(Name,age,Stuff);
+        this.Permission = Officer.givePermission(Stuff);
+
+
+    }
 
     public Elderly(Helper state, String Name, int age, String Stuff){
         super(Name,age,Stuff);
-        this.isHelperNeeded = state;
+        this.Permission = Officer.givePermission(Stuff);
     }
 
     public boolean getPermission(){
-
         return this.Permission;
     }
 

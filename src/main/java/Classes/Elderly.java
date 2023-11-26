@@ -1,7 +1,9 @@
 package Classes;
 
+
 public class Elderly extends Person  {
     private boolean Permission;
+
 
 
     public Elderly(String Name,int age, String Stuff){ super(Name,age,Stuff);

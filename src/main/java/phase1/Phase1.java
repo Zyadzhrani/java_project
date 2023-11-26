@@ -43,6 +43,7 @@ public class Phase1 extends Application {
 
         // Create a path transition
         Line straightLine = (Line) root.lookup("#Line1");
+        straightLine = straightLine.
         Line line = new Line(-100,0,-100,500);
         PathTransition pathTransition = new PathTransition();
         pathTransition.setNode(c12);
